@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body id="body">
+    <div class="container-fluid">
+
+        <div class="row menu azul">
+            <div class="col-sm-1">
+                <div class="brand-shenikah">
+                    <span class="textoBranco">Shenikah</span>
+                </div>
+            </div>
+            <div class="col-sm-5"></div>
+            <div class="col-sm-1">
+                <h5 class="textoBranco">Inicio</h5>
+            </div>
+
+            <div class="col-sm-1">
+                <h5 class="textoBranco">Sobre Nós</h5>
+            </div>
+
+            <div class="col-sm-1">
+                <h5 class="textoBranco">Contato</h5>
+            </div>
+
+            <div class="col-sm-1">
+                <h5 class="textoBranco">Serviços</h5>
+            </div>
+
+            <div class="col-sm-1">
+                <h5 class="textoBranco">Ajuda</h5>
+            </div>
+
+            <div class="col-sm-1 branco btn-menu-signin" id="btn-menu-signin">
+                <img class="icon" src="images/user.svg" alt="icon" width="40" height="25">
+            </div>
+            <!-- MODAL -->
+            <div class="modal-opcoes-login" id="modal-opcoes-login">
+                <ul>
+                    <li>Entrar</li>
+                    <li style="width: 85%; background-color: #2a4c67; height: 1px;"></li>
+                    <li>Cadastrar</li>
+                </ul>
+            </div>
+            <!-- FIM MODAL -->
+        </div>
+        <div class="row azul">
+            <span style="padding: 50px;">
+            </span>
+        </div>
+        <div class="row azul textoBranco centro">
+            <p class="txtgrande1">Shenikah</p>
+            <p class="txtgrande2">O Seu Seguro Online</p>
+        </div>
+        <div class="row azul boxes">
+            <div class="col-sm-3">
+            </div>
+
+            <div class="col-sm-2">
+                <div class="box">
+                    <p class="textoCaixas">Serviços</p>
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+
+                <div class="box">
+                    <p class="textoCaixas">Vistorias
+                        Online</p>
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+
+                <div class="box">
+                    <p class="textoCaixas">Agende uma visita</p>
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+
+            </div>
+            <!-- <img src="images/seguro.jpg" alt="carro" width="100" height="200px"> -->
+        </div>
+          
+        
+        <div class="row">
+            <div class="col-lg-12 imagem_carro">
+            </div>
+        </div>
+        
+        <div class="row azul padding footer">
+        </div>
+
+        <div class="row azul">
+
+            <div class="col-sm-1">
+
+            </div>
+
+            <div class="col-sm-3">
+                <h5 class="branco">CENTRAL DE SERVIÇOS</h6>
+                    <p class="branco">Assistência 24h | Sinistro | Vistoria</p>
+                    <p class="branco">3003 5770</p>
+                    <p class="branco">Capitais e regiões metropolitanas</p>
+                    <p class="branco">0800 730 9901</p>
+                    <p class="branco">Demais localidades</p>
+
+            </div>
+
+            <div class="col-sm-4">
+                <h5 class="branco">VENDAS</h6>
+                    <p class="branco">Contratar seguros</p>
+                    <p class="branco">0800 730 9902</p>
+                    <p class="branco">Contrate pelo telefone de seg a sáb, das 9h às 21h.</p>
+
+            </div>
+
+            <div class="col-sm-3">
+                <h5 class="branco">AJUDA</h6>
+                    <p class="branco">Dúvidas | Reclamações | Cancelamento</p>
+                    <p class="branco">0800 730 9903</p>
+                    <p class="branco">Nosso time de ajuda está sempre disponível para te atender 24h por dia, 7 dias na
+                        semana.​</p>
+                    <p class="branco">DEFICIENTE AUDITIVO</p>
+                    <p class="branco">0800 730 9904</p>
+                    <p class="branco">Somos inclusivos e aqui todo mundo tem voz.</p>
+            </div>
+            <div class="col-sm-1">
+
+            </div>
+        </div>
+
+        <div class="row azul">
+            <div class="col-sm-1 branco">
+
+            </div>
+            <div class="col-sm-5 branco networks">
+                <img class="icon" src="images/facebook.svg" alt="icon" width="30" height="">
+                <img class="icon" style="margin-left: 10px;" src="images/instagram.svg" alt="icon" width="30" height="">
+                <img class="icon" style="margin-left: 10px;" src="images/twitter.svg" alt="icon" width="30" height="">
+            </div>
+
+        </div>
+        <div class="row azul padding2">
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        // CONTROLADOR DO MODAL
+        const body = document.getElementById("body");
+        const btnSignIn = document.getElementById("btn-menu-signin");
+        const modalOpcoesSignIn = document.getElementById("modal-opcoes-login");
+        btnSignIn.addEventListener('click', ()=>{
+            const state = modalOpcoesSignIn.style.display;
+            modalOpcoesSignIn.style.display = state == 'block'? 'none': 'block';
+        });
+        body.addEventListener('click', (event)=>{
+            console.log(event);
+            if(event.srcElement.parentElement.id != "modal-opcoes-login" && event.srcElement.parentElement.parentElement.id != "modal-opcoes-login" &&event.srcElement.parentElement.id != "btn-menu-signin" ){
+                modalOpcoesSignIn.style.display = 'none';
+            }
+        });
+        
+    </script>
+</body>
+
+</html>

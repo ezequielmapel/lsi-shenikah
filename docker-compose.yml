@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+ db:
+  image: "mongo"
+  container_name: "shenikah_db"
+  ports:
+   - "27017:27017"
+ web:
+  build: 
+   context: "./app" 
+   dockerfile: "Dockerfile_web"
+  container_name: "shenikah_web"
+  volumes:
+   - "./app:/usr/src/app"
+  command: "npm start"
+  ports:
+   - "80:8080"
+  links:
+   - "db"
