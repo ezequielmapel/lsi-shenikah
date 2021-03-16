@@ -3,19 +3,19 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('user.ejs');
-});
-
-router.get('/cadastro', function(req, res, next) {
-  res.render('cadastro.ejs');
+  res.render('user');
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('login.ejs');
+  res.render('login');
+});
+
+router.get('/cadastro', function(req, res, next) {
+  res.render('cadastro');
 });
 
 router.get('/dados_do_agente', function(req, res, next) {
-  res.render('dados_do_agente.ejs');
+  res.render('dados_do_agente');
 });
 
 module.exports = router;
