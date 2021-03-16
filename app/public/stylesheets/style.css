@@ -12,8 +12,8 @@
 
 .textoBranco{
     color: white;
-    font-weight: bold
-
+    font-weight: bold;
+    padding-top: 1%;
 }
 
 .textoCaixas{
@@ -198,14 +198,12 @@
 }
 
 .icons{
-    width: 14%;
-    height: 14%;
-    margin-top: 1%;
-    margin-bottom: 15.5%;
+    width: 20px;
+    margin-right: 6px;
 }
 
 .fontp{
-    font-size: 150%;
+    font-size: 20px;
 
 }
 
@@ -213,9 +211,7 @@
     margin-left: 165%;
 }
 
-.esquerdaM{
-    margin-left: 30%;
-}
+
 
 
 .montanhaDU{
@@ -224,7 +220,7 @@
 }
 
 .montanhaEU{
-    margin-left: -3.21%;
+    margin-left: -3.23%;
     margin-top: 4.7%;
 }
 
@@ -246,4 +242,51 @@
 .montanhaED{
     margin-left: -3.21%;
     margin-top: -38.8%;
+}
+
+
+
+
+.montanha1{
+    background-image: url('../images/montanha1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 40%;
+    max-height: 300px;
+    height: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0%;
+
+}
+.edicao{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.edicao .edicao_opcoes div{
+   height: 50px;
+   padding: 5px;
+}
+.edicao .edicao_opcoes div:hover{
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+.montanha2{
+    background-image: url('../images/montanha2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    position: absolute;
+    width: 30%;
+    max-height: 400px;
+    height: 100%;
+    z-index: 100;
+    bottom: 0%;
+    left: 70%;
+    
 }

@@ -26,6 +26,14 @@ function salvarUsuario(Usuario, callback){
     });
 }
 
+// Função para excluir um novo usuário
+async function deletarUsuario(Usuario){
+    return await Usuario.deleteOne({nome: Usuario.nome, email: Usuario.email}).catch(err => console.log(err));
+}
+
+usuarioSchema.methods.salvar = salvarUsuario;
+usuarioSchema.methods.deletar = deletarUsuario;
+
 
 const Usuario = mongoose.model('usuarios', usuarioSchema);
 module.exports = Usuario;
