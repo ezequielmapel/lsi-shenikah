@@ -1,54 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title>Cadastro</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/stylesheets/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    </head>
 
-    <body>
-        <div class="container-fluid">
-            <div class="row azul">
-                <div class="col-sm-1">
+<head>
+    <title>Cadastro</title>
+    <meta charset="utf-8">
+    <%- include('parts/head.ejs') %>
 
-                </div>
-                <div class="col-sm-5">
-                    <h5 class="textoBranco">Shekinah</h5>
-                </div>
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Inicio</h5>
-                </div>
-                    
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Sobre Nós</h5>
-                </div>
-                    
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Contato</h5>
-                </div>
-                    
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Serviços</h5>
-                </div>
+</head>
 
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Ajuda</h5>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid bgcinza">
+<body>
+    <div class="container-fluid bgcinza">
+        <%- include('parts/menu.ejs') %>
             <div class="row ">
                 <div class="padding">
                 </div>
             </div>
-            <div class="row padding2">
+            <div class="row">
                 <div class="col-sm-1">
                 </div>
-                <div class="col-sm-11">
-                    <div class="boxM">
+                <div class="col-sm-10" style="background-color: white;">
                     <div class="row">
                         <div class="col-sm-5">
 
@@ -61,136 +31,59 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="montanha1"></div>
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4" >
+                            <form class="cadastrar centro" action="/action_page.php">
+                                <br><br>
+                                <input type="text" id="nome" name="nome" placeholder="Nome"><br><br>
+
+                                <input type="text" id="email" name="email" placeholder="Email"><br><br>
+
+                                <input type="text" id="telefone" name="telefone" placeholder="Telefone"><br><br>
+
+                                <input type="text" id="CPF" name="CPF" placeholder="CPF"><br><br>
+
+                                <input type="text" id="RG" name="RG" placeholder="RG"><br><br>
+                            </form>
+                            
+                        </div>
+                        <div class="montanha2"></div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 5px;">
                         <div class="col-sm-5">
 
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2" >
 
-                        <form class="centro" action="/action_page.php">
-                            <br><br>
-                            
-                            
-                            <input type="text" id="nome" name="nome" value="Nome"><br><br>
+                            <div class="centro button">
+                                <img src="/images/send.svg" alt="icon">
+                            </div>
 
-                            <input type="text" id="email" name="email" value="Email"><br><br>
-                            
-                            <input type="text" id="telefone" name="telefone" value="Telefone"><br><br>
 
-                            <input type="text" id="CPF" name="CPF" value="CPF"><br><br>
-                            
-                            <input type="text" id="RG" name="RG" value="RG"><br><br>
-
-                          </form> 
                         </div>
                         <div class="col-sm-5">
-                            
-                        </div>
-                    </div>
-                        <div class="row">
-                            <div class="col-sm-5">
 
-                            </div>
-                            <div class="col-sm-2">
-
-                                <div class="padding3">
-
-                                </div>
-
-                                <div class="centro">
-                                
-                                
-                                    <img class="icon button" src="/images/send.svg" alt="icon">
-    
-                                </div>
-    
-                            
-                            </div>
-                            <div class="col-sm-5">
-                                
-                            </div>
-
-
-                           
                         </div>
 
-                        <div class="row">
 
-                            <div class="col-sm-4">
-                                <img class="icon montanhaEC" src="/images/montanha1.svg" alt="icon" width="400" height="240">
-                            </div>
-                            <div class="col-sm-2">
-                           
-                            </div>
-                            <div class="col-sm-6">
-                            <img class="icon montanhaDC" src="/images/montanha2.svg" alt="icon" width="400" height="300">
-                            </div>
-                        </div>
 
                     </div>
-                   
+
+
+
                 </div>
+                <div class="col-sm-1"></div>
             </div>
-        </div>
-
-            <div class="row bgcinza">
-                <div class="padding4">
-
-                </div>
+            <div class="padding4">
             </div>
-                <div class="row azul">
-                
-                    <div class="col-sm-1">
-        
-                    </div>
-                    
-                    <div class="col-sm-3">
-                        <h5 class="branco">CENTRAL DE SERVIÇOS</h6>
-                        <p class="branco">Assistência 24h | Sinistro | Vistoria</p>
-                        <p class="branco">3003 5770</p>
-                        <p class="branco">Capitais e regiões metropolitanas</p>
-                        <p class="branco">0800 730 9901</p>
-                        <p class="branco">Demais localidades</p>
-    
-                    </div>
-    
-                    <div class="col-sm-4">
-                        <h5 class="branco">VENDAS</h6>
-                        <p class="branco" >Contratar seguros</p>
-                        <p class="branco">0800 730 9902</p>
-                        <p class="branco">Contrate pelo telefone de seg a sáb, das 9h às 21h.</p>
-                            
-                    </div>
-    
-                    <div class="col-sm-3">
-                        <h5 class="branco">AJUDA</h6>
-                        <p class="branco" >Dúvidas | Reclamações | Cancelamento</p>
-                        <p class="branco">0800 730 9903</p>
-                        <p class="branco">Nosso time de ajuda está sempre disponível para te atender 24h por dia, 7 dias na semana.​</p>
-                        <p class="branco">DEFICIENTE AUDITIVO</p>
-                        <p class="branco">0800 730 9904</p>
-                        <p class="branco">Somos inclusivos e aqui todo mundo tem voz.</p>
-                    </div>
-                    <div class="col-sm-1">
-                       
-                    </div>
-                </div>
-    
-                <div class="row azul">
-                    <div class="col-sm-1 branco">
-    
-                    </div>
-                    <div class="col-sm-5 branco">
-                        <img class= "icon" src="images/facebook.svg" alt="icon" width="40" height="25">
-                        <img class= "icon" src="images/instagram.svg" alt="icon" width="40" height="25">
-                        <img class= "icon" src="images/twitter.svg" alt="icon" width="40" height="25">
-                    
-                    </div>
-                    
-                </div>
-                <div class="row azul padding2">
+            <%- include('parts/footer.ejs') %>
+    </div>
 
-                </div>
+   
 
 
-    </body>
-</html>
+
