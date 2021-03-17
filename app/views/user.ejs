@@ -2,46 +2,15 @@
 <html lang="pt-br">
     <head>
         <title>Usuários</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="stylesheets/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <%- include('parts/head.ejs') %>
+
     </head>
 
     <body>
-        <div class="container-fluid">
-
-            <div class="row azul">
-                <div class="col-sm-1">
-
-                </div>
-                <div class="col-sm-5">
-                    <h5 class="textoBranco">Shekinah</h5>
-                </div>
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Inicio</h5>
-                </div>
-                    
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Sobre Nós</h5>
-                </div>
-                    
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Contato</h5>
-                </div>
-                    
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Serviços</h5>
-                </div>
-
-                <div class="col-sm-1">
-                    <h5 class="textoBranco">Ajuda</h5>
-                </div>
-                
-            </div>
-        </div>
+    
 
         <div class="container-fluid bgcinza">
+            <%- include('parts/menu.ejs') %>
             <div class="row ">
                 <div class="padding">
                 </div>
@@ -111,48 +80,6 @@
                 </div>
             </div>
             
-                <div class="row azul">
-                    <div class="col-sm-1">
-        
-                    </div>
-                    <div class="col-sm-3">
-                        <h5 class="branco">CENTRAL DE SERVIÇOS</h6>
-                        <p class="branco">Assistência 24h | Sinistro | Vistoria</p>
-                        <p class="branco">3003 5770</p>
-                        <p class="branco">Capitais e regiões metropolitanas</p>
-                        <p class="branco">0800 730 9901</p>
-                        <p class="branco">Demais localidades</p>
-                    </div>
-    
-                    <div class="col-sm-4">
-                        <h5 class="branco">VENDAS</h6>
-                        <p class="branco" >Contratar seguros</p>
-                        <p class="branco">0800 730 9902</p>
-                        <p class="branco">Contrate pelo telefone de seg a sáb, das 9h às 21h.</p>
-                    </div>
-    
-                    <div class="col-sm-3">
-                        <h5 class="branco">AJUDA</h6>
-                        <p class="branco" >Dúvidas | Reclamações | Cancelamento</p>
-                        <p class="branco">0800 730 9903</p>
-                        <p class="branco">Nosso time de ajuda está sempre disponível para te atender 24h por dia, 7 dias na semana.​</p>
-                        <p class="branco">DEFICIENTE AUDITIVO</p>
-                        <p class="branco">0800 730 9904</p>
-                        <p class="branco">Somos inclusivos e aqui todo mundo tem voz.</p>
-                    </div>
-                    <div class="col-sm-1">
-                    </div>
-                </div>
-    
-                <div class="row azul">
-                    <div class="col-sm-1 branco">
-                    </div>
-                    <div class="col-sm-5 branco padding4">
-                        <img class= "icon" src="images/facebook.svg" alt="icon" width="40" height="25">
-                        <img class= "icon" src="images/instagram.svg" alt="icon" width="40" height="25">
-                        <img class= "icon" src="images/twitter.svg" alt="icon" width="40" height="25">
-                    </div>
-                    
-                </div>
-    </body>
-</html>
+            <%- include('parts/footer.ejs') %>
+
+  
