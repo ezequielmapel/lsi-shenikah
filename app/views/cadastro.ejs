@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <title>Cadastro</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/stylesheets/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
 
-<head>
-    <title>Cadastro</title>
-    <meta charset="utf-8">
-    <%- include('parts/head.ejs') %>
+    <body>
+        <div class="container-fluid">
+            <div class="row azul">
+                <div class="col-sm-1">
 
-</head>
+                </div>
+                <div class="col-sm-5">
+                    <h5 class="textoBranco">Shekinah</h5>
+                </div>
+                <div class="col-sm-1">
+                    <h5 class="textoBranco">Inicio</h5>
+                </div>
+                    
+                <div class="col-sm-1">
+                    <h5 class="textoBranco">Sobre Nós</h5>
+                </div>
+                    
+                <div class="col-sm-1">
+                    <h5 class="textoBranco">Contato</h5>
+                </div>
+                    
+                <div class="col-sm-1">
+                    <h5 class="textoBranco">Serviços</h5>
+                </div>
 
-<body>
-    <div class="container-fluid bgcinza">
-        <%- include('parts/menu.ejs') %>
+                <div class="col-sm-1">
+                    <h5 class="textoBranco">Ajuda</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bgcinza">
             <div class="row ">
                 <div class="padding">
                 </div>
@@ -18,7 +47,8 @@
             <div class="row">
                 <div class="col-sm-1">
                 </div>
-                <div class="col-sm-10" style="background-color: white;">
+                <div class="col-sm-10" style="background-color: white;" >
+                    
                     <div class="row">
                         <div class="col-sm-5">
 
@@ -26,59 +56,78 @@
                         <div class="col-sm-2">
                             <h3 class="centro">Cadastro</h3>
                         </div>
-                        <div class="col-sm-5">
+
+                        <div class="montanha1">
 
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="montanha1"></div>
                         <div class="col-sm-4">
+
                         </div>
-                        <div class="col-sm-4" >
-                            <form class="cadastrar centro" action="/action_page.php">
-                                <br><br>
-                                <input type="text" id="nome" name="nome" placeholder="Nome"><br><br>
+                    
+                        <div class="col-sm-4">
 
-                                <input type="text" id="email" name="email" placeholder="Email"><br><br>
+                        </div>
+                        <div class="montanha2">
 
-                                <input type="text" id="telefone" name="telefone" placeholder="Telefone"><br><br>
-
-                                <input type="text" id="CPF" name="CPF" placeholder="CPF"><br><br>
-
-                                <input type="text" id="RG" name="RG" placeholder="RG"><br><br>
-                            </form>
+                        </div>
+                        <div class="col-sm-4">
                             
                         </div>
-                        <div class="montanha2"></div>
                         <div class="col-sm-4">
                         </div>
                     </div>
-                    <div class="row" style="margin-bottom: 5px;">
-                        <div class="col-sm-5">
-
-                        </div>
-                        <div class="col-sm-2" >
-
-                            <div class="centro button">
-                                <img src="/images/send.svg" alt="icon">
+                        <div class="row">
+                            <div class="col-sm-4">
                             </div>
+                            <div class="col-sm-4">
 
+                            <form class="centro" action="/action_page.php">
+                                <br><br>
+                                
+                                
+                                <input type="text" id="nome" name="nome" value="Nome"><br><br>
 
+                                <input type="text" id="email" name="email" value="Email"><br><br>
+                                
+                                <input type="text" id="telefone" name="telefone" value="Telefone"><br><br>
+
+                                <input type="text" id="CPF" name="CPF" value="CPF"><br><br>
+                                
+                                <input type="text" id="RG" name="RG" value="RG"><br><br>
+
+                            </form> 
                         </div>
-                        <div class="col-sm-5">
-
+                        <div class="col-sm-4">
+                            
                         </div>
+                        
+                    
+                        <div class="row">
+                            <div class="col-sm-5">
 
+                            </div>
+                            <div class="col-sm-2">
 
+                                <div class="padding3">
 
+                                </div>
+
+                                <div class="centro">
+
+                                    <img class="icon button" src="/images/send.svg" alt="icon">
+    
+                                </div>
+
+                            </div>
+                            <div class="col-sm-5">
+                                
+                            </div>
+                        </div>
                     </div>
-
-
-
+                   
                 </div>
-                <div class="col-sm-1"></div>
-            </div>
-            <div class="padding4">
+                <div class="col-sm-1">
+                </div>
             </div>
         
             <%- include('parts/footer.ejs') %>
@@ -86,8 +135,3 @@
     </body>
 
 </html>    
-
-   
-
-
-
