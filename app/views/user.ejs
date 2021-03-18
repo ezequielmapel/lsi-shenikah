@@ -2,14 +2,16 @@
 <html lang="pt-br">
     <head>
         <title>Usuários</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
         <%- include('parts/head.ejs') %>
 
     </head>
 
     <body>
-    
-
         <div class="container-fluid bgcinza">
+            
             <%- include('parts/menu.ejs') %>
             <div class="row ">
                 <div class="padding">
@@ -46,10 +48,11 @@
                             <div class="row">
 
                                 <div class="col-sm-12 edicao_opcoes">
-                                    <div class="fontp"> <img class="icon icons" src="images/pen.svg" alt="icon"> Editar Usuário</div>
-                                    <div class="fontp"> <img class="icon icons" src="images/delete.svg" alt="icon"> Excluir Usuário</div>
-                                    <div class="fontp"> <img class="icon icons" src="images/plus.svg" alt="icon">Adicionar Usuário</div>
-                                    <div class="fontp"> <img class="icon icons" src="images/search.svg" alt="icon"> Consultar Usuário</div>
+                                    <div id="btnConsultar" class="fontp"> <img class="icon icons" src="/images/search.svg" alt="icon"> Consultar Usuário</div>
+                                    <div id="btnAdicionar" class="fontp"> <img class="icon icons" src="/images/plus.svg" alt="icon">Adicionar Usuário</div>
+
+                                    <div class="fontp"> <img class="icon icons" src="/images/pen.svg" alt="icon"> Editar Usuário</div>
+                                    <div class="fontp"> <img class="icon icons" src="/images/delete.svg" alt="icon"> Excluir Usuário</div>
                                 </div>
                                 
 
@@ -74,6 +77,22 @@
             </div>
             
             <%- include('parts/footer.ejs') %>
+
+            <script type="text/javascript">
+                const btnConsultar = document.getElementById("btnConsultar");
+                const btnAdicionar = document.getElementById("btnAdicionar");
+
+                btnConsultar.addEventListener('click', ()=>{
+                    window.location.href="dados"
+                });
+
+                btnAdicionar.addEventListener('click', ()=>{
+                    window.location.href="cadastro"
+                });
+
+
+            </script>
+
 
     </body>
 </html>

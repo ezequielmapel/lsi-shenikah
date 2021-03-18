@@ -301,3 +301,16 @@
 .cadastrar input{
     padding: 5px;
 }
+
+.alerta{
+    position: absolute;
+    width: 90%;
+    bottom: 0%;
+    right: 5%;
+    display: none;
+   
+}
+.alertain{
+    opacity: 1;
+    display: block;
+}
