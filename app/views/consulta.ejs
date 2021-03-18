@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Cadastro</title>
+    <title>Consultar</title>
     <%- include('parts/head.ejs') %>
 
 </head>
@@ -16,86 +16,48 @@
                 <div class="padding">
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-sm-1">
                 </div>
-                <div class="col-sm-10" style="background-color: white;">
+                <div class="col-sm-10" style="background-color: white; min-height: 400px;">
 
                     <div class="row">
-                        <div class="col-sm-5">
-
-                        </div>
-                        <div class="col-sm-2">
-                            <h3 class="centro">Cadastro</h3>
-                        </div>
-
-                        <div class="montanha1">
-
+                        <div class="consultar_bg">
                         </div>
                         <div class="col-sm-4">
-
                         </div>
-
                         <div class="col-sm-4">
-
+                            <h3 class="centro">Consultar</h3>
                         </div>
+
+                       
                         <div class="montanha2">
-
-                        </div>
-                        <div class="col-sm-4">
-
                         </div>
                         <div class="col-sm-4">
                         </div>
+
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 pesquisar" style="max-height: 400px; height: 100%;">
+                            <input id="consultar" type="text" placeholder="Pesquisar">
 
-                            <form class="centro cadastrar" method="POST">
-                                <br><br>
+                           <div class="linhas">
+                            <div class="linha"></div>
+                            <div class="linha lcurta"></div>
+                            <div class="linha"></div>
+                            <div class="linha lcurta"></div>
+                           </div>
 
-                                <input type="text" id="nome" name="nome" placeholder="Nome"><br><br>
-
-                                <input type="text" id="email" name="email" placeholder="Email"><br><br>
-
-                                <input type="password" id="senha" name="senha" placeholder="senha"><br><br>
-
-                                <input type="text" id="telefone" name="telefone" placeholder="Telefone"><br><br>
-
-                                <input type="text" id="CPF" name="CPF" placeholder="CPF"><br><br>
-
-                                <input type="text" id="RG" name="RG" placeholder="RG"><br><br>
-
-                            </form>
                         </div>
                         <div class="col-sm-4">
 
                         </div>
 
 
-                        <div class="row">
-                            <div class="col-sm-5">
-
-                            </div>
-                            <div class="col-sm-2">
-
-                                <div class="padding3">
-
-                                </div>
-
-                                <div id="btnCadastrar" class="centro button">
-
-                                    <img class="icon" src="/images/send.svg" alt="icon">
-
-                                </div>
-
-                            </div>
-                            <div class="col-sm-5">
-
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </div>
@@ -112,8 +74,8 @@
 
     <script type="text/javascript">
         const btnCadastrar = document.getElementById("btnCadastrar");
-        
         btnCadastrar.addEventListener('click', () => {
+            console.log('tentativa feita');
             const httpRequest = new XMLHttpRequest();
             const URL = 'cadastrar';
             const dadosEnviar = formularioCadastrar();

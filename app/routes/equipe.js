@@ -3,11 +3,8 @@ var router = express.Router();
 const Usuario = require('../models/usuario');
 
 /* POST users listing. */
-router.post('/cadastrar', function(req, res, next) {
-  console.log(req.body);
-  
+router.post('/cadastrar', function(req, res, next) {  
   const novoEquipe = Usuario.factory(req.body);
-  console.log(novoEquipe);
   
   Usuario.salvar(novoEquipe, (err) => {
     if(err){
@@ -27,7 +24,9 @@ router.post('/cadastrar', function(req, res, next) {
 router.get('/painel', function(req, res, next) {
   res.render('user');
 });
-
+router.get('/consultar', function(req, res, next) {
+  res.render('consulta');
+});
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
