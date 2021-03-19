@@ -61,10 +61,6 @@ router.get('/cadastro', function(req, res, next) {
   res.render('cadastro');
 });
 
-router.get('/dados', function(req, res, next) {
-  res.render('dados_do_agente');
-});
-
 router.get("*", function(req, res, next){
   res.render('user');
 });

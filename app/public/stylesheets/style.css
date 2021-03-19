@@ -118,16 +118,24 @@
 
 /* att */
 .menu{
-    padding-top: 10px;
     height: 60px;
     text-align: center;
+    padding-top: 10px;
 }
 .menu div:hover h5{text-shadow: 0px 1px 3px #333;}
 .menu div:hover{cursor: pointer;}
-
+.menu h5{
+    line-height: 1;
+}
 
 .brand-shenikah{
     text-align: center;
+    line-height: 3; 
+    text-decoration: none;
+}
+.brand-shenikah a:hover{
+    color: white;
+    text-decoration: none;
 }
 
 .imagem_carro{
@@ -168,6 +176,9 @@
 }
 .modal-opcoes-login ul li:hover{
     color: #333;
+}
+.modal-opcoes-login a:hover{
+    text-decoration: none;
 }
 
 @media only screen and (max-device-width: 900px) {
