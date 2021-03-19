@@ -7,6 +7,8 @@ const usuarioSchema = new mongoose.Schema({
     nome: { type: String, require: true },
     email: { type: String, require: true, unique: true, index: true },
     senha: { type: String, required: true },
+    cpf: {type: String},
+    rg: {type: String},
     telefone: { type: String },
     autorizacao: { type: String },
     emailVerificado: { type: Boolean, default: false },
@@ -32,6 +34,18 @@ async function deletarUsuario(Usuario) {
     return await Usuario.deleteOne({ nome: Usuario.nome, email: Usuario.email }).catch(err => console.log(err));
 }
 
+// Função para obter os usuários com filtro no nome
+async function filtrar(search){
+    return await Usuario.find({"nome":{$regex: new RegExp(["^", search, ".*$"].join(""), "i")}})
+}
+
+// Função para obter um usuario
+async function filtrarEspecifico(search){
+    return await Usuario.findOne({"nome": search})
+}
+
+
+
 // Função para transformar JSON em Usuario
 function factory(usuario) {
     return new Usuario({
@@ -44,12 +58,15 @@ function factory(usuario) {
         termosUso: usuario["termosUso"],
         tentativasLogin: usuario["tentativasLogin"],
         bloqueado: usuario["bloqueado"],
+        cpf: usuario["cpf"],
+        rg: usuario["rg"]
     });
 }
 
 usuarioSchema.statics.factory = factory;
 usuarioSchema.statics.salvar = salvarUsuario;
-
+usuarioSchema.statics.filtrar = filtrar;
+usuarioSchema.statics.filtrarEspecifico = filtrarEspecifico;
 
 usuarioSchema.methods.deletar = deletarUsuario;
 

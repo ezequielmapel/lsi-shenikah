@@ -359,3 +359,31 @@
     opacity: .6;
 }
 .lcurta{width: 65%;}
+
+*:focus {
+    outline: none;
+}
+
+.resultadoConsulta{
+    position: absolute;
+    width: 70%;
+    top: 22%;
+    left: 10%;
+}
+.list-group-item:hover{
+    background-color: #ddd;
+    cursor: pointer;
+    
+}
+.listaLink{
+    text-decoration: none;
+    color: #222;
+}
+.listaLink:hover{
+    color: #222;
+    text-decoration: none;
+}
+.font22{
+    font-size: 22px;
+    color: #666;
+}

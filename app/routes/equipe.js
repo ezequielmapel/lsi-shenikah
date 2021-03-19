@@ -24,9 +24,35 @@ router.post('/cadastrar', function(req, res, next) {
 router.get('/painel', function(req, res, next) {
   res.render('user');
 });
+
 router.get('/consultar', function(req, res, next) {
   res.render('consulta');
 });
+
+router.get('/consultar/lista', async function(req, res, next) {
+  
+  const search = req.query["search"].trim();
+  if(search.length < 3){
+    return res.send({tipo:'danger', prefixo: 'Falha!', msg:'Filtro com caracter insuficiente.'});
+  }
+
+  const membros = await Usuario.filtrar(search);
+  console.log(membros);
+  if(membros.length == 0){
+    return res.send({tipo:'danger', prefixo: ':(', msg:'Sua busca não retornou nada.'});
+  }
+  
+  return res.send({tipo:'ignore', data:membros});
+});
+
+router.get('/consultar/dados/:nome', async function(req, res, next){
+  const membro = await Usuario.filtrarEspecifico(req.params["nome"].trim());
+  if(membro == null){
+    res.redirect('../');
+  }
+  return res.render('dados_do_agente', {membro});
+});
+
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
