@@ -6,5 +6,7 @@
   ```docker-compose up -d```<br><br>
   Certifique-se que os contêiners foram levantados usando:<br>
   ```docker ps```<br><br>
-  Lembrando que os contêiners utilizam as portas 80:8080 e 27017:27017.<br> Após isso é possivel acessar a [_homepage_](http:localhost:80)
+  Lembrando que os contêiners utilizam as portas 80:8080 e 27017:27017.<br> Após isso é possivel acessar a [_homepage_](http://localhost:80)
+  <br><br>
+  [Link Apresentação](https://youtu.be/4jfCnqPYvi4)
   
